@@ -1,0 +1,6 @@
+{
+  "platforms": ["android"],
+  "android": {
+    "modules": ["com.communik8.nik8native.Nik8NativeModule"]
+  }
+}

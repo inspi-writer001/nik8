@@ -1,0 +1,4 @@
+[env]
+# opus-rs keeps large buffers on the stack; unoptimized test builds need ~16 MB.
+# (Release needs ~3 MB; the app's codec threads get 8 MB, see nik8-ffi.)
+RUST_MIN_STACK = "16777216"

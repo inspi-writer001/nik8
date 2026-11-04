@@ -1,0 +1,24 @@
+# Rust build output
+**/target/
+
+
+/accounts/
+*-keypair.json
+!Cargo.lock
+certs/*
+
+# Generated leader-schedule snapshots and scratch output
+/sender/leader_schedule/
+/sender/cluster_nodes/
+/leaders.txt
+
+# Local environment and editor files
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+*.swp
+*~
+
+FvnMdEcvPEikfu7H7UGejYZZjryzgCsueRAEdVCrWFzQ

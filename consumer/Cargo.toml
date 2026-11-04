@@ -1,0 +1,16 @@
+[package]
+name = "nik8_consumer"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1"
+dotenvy = "0.15.7"
+futures = "0.3"
+nik8_shared = { path = "../shared" }
+solana-address = { version = "2.7.0", features = ["curve25519", "decode"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "signal", "time"] }
+tokio-util = "0.7"
+tonic = { version = "0.14.6", features = ["tls-ring", "tls-webpki-roots"] }
+yellowstone-grpc-client = "16"
+yellowstone-grpc-proto = "14.0.1"

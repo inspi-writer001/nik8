@@ -1,0 +1,32 @@
+[package]
+name = "nik8_core"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+base64 = "0.22"
+bs58 = "0.5"
+ed25519-dalek = "2.2"
+getrandom = "0.3"
+nik8_consumer = { path = "../consumer" }
+nik8_shared = { path = "../shared" }
+opus-rs = { version = "0.1.37", features = ["libm"], default-features = false }
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "json", "http2"] }
+serde_json = "1"
+sha2 = "0.10"
+solana-address = { version = "2.7.0", features = ["curve25519", "decode"] }
+tokio = { version = "1", features = ["time", "macros", "sync", "rt"] }
+tokio-util = "0.7"
+wtransport = { version = "0.7.2", default-features = false, features = ["ring", "quinn"] }
+
+[dev-dependencies]
+dotenvy = "0.15.7"
+hound = "3.5.1"
+bincode = "1.3.3"
+solana-hash = "4.3.0"
+solana-instruction = "3.5.0"
+solana-keypair = "3.1.2"
+solana-pubkey = "4.3.0"
+solana-signer = "3.0.1"
+solana-transaction = { version = "4.3.0", features = ["serde", "wincode"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }

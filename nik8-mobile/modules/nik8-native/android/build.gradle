@@ -1,0 +1,20 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'com.communik8.nik8native'
+version = '0.1.0'
+
+android {
+  namespace "com.communik8.nik8native"
+  defaultConfig {
+    versionCode 1
+    versionName "0.1.0"
+  }
+}
+
+dependencies {
+  // UniFFI Kotlin bindings load libnik8_ffi.so through JNA.
+  implementation "net.java.dev.jna:jna:5.17.0@aar"
+}

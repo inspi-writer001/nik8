@@ -1,0 +1,20 @@
+[workspace]
+resolver = "2"
+members = ["sender", "consumer", "program", "shared", "nik8-core", "nik8-ffi"]
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+overflow-checks = true
+
+# nik8-ffi runs inside the app: panics must unwind so UniFFI can turn them into
+# exceptions instead of aborting the process.
+[profile.mobile]
+inherits = "release"
+panic = "unwind"
+
+[profile.release.build-override]
+opt-level = 3
+incremental = false
+codegen-units = 1

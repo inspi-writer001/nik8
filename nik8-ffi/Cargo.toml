@@ -1,0 +1,19 @@
+[package]
+name = "nik8_ffi"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[[bin]]
+name = "uniffi-bindgen"
+path = "uniffi-bindgen.rs"
+
+[dependencies]
+nik8_core = { path = "../nik8-core" }
+nik8_shared = { path = "../shared" }
+thiserror = "2.0.21"
+tokio = { version = "1", features = ["rt-multi-thread", "time"] }
+tokio-util = "0.7"
+uniffi = { version = "0.32.2", features = ["cli"] }

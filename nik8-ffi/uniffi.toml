@@ -1,0 +1,3 @@
+[bindings.kotlin]
+package_name = "com.communik8.nik8ffi"
+cdylib_name = "nik8_ffi"
